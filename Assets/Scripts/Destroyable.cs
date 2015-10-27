@@ -17,7 +17,6 @@ public class Destroyable : MonoBehaviour {
         //}
 
         if(bullet != null) { // STRZELA
-            Debug.Log("d");
             bullet.player.score++;
             Destroy(gameObject);
             
