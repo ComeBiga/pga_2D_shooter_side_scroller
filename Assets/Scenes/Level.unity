@@ -870,6 +870,7 @@ GameObject:
   - 61: {fileID: 1189864073}
   - 114: {fileID: 1189864074}
   - 114: {fileID: 1189864075}
+  - 95: {fileID: 1189864072}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -899,7 +900,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1024582385
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bd1989b4e42a0454097f657dfb368bd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -910,7 +911,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189864066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.0850983, y: -3.87470651, z: 0}
+  m_LocalPosition: {x: -38.0850983, y: -3.87470651, z: -2}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 719703054}
@@ -960,6 +961,24 @@ MonoBehaviour:
   force: 1500
   rb: {fileID: 1189864069}
   grounded: 0
+  m_Animator: {fileID: 1189864072}
+--- !u!95 &1189864072
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1189864066}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 34878b27166cfd64b87efa8a4fde9452, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &1189864073
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1001,6 +1020,7 @@ MonoBehaviour:
   bullet: {fileID: 119394, guid: 3994ea09a05b68e4da90a7d7e82e9fe8, type: 2}
   scoreText: {fileID: 1841847815}
   score: 0
+  m_Animator: {fileID: 1189864072}
 --- !u!1 &1354257021
 GameObject:
   m_ObjectHideFlags: 0

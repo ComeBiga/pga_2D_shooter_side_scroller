@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour {
     public Rigidbody2D rb;
 
     public bool grounded = false;
+    public Animator m_Animator;
     
 	// Use this for initialization
 	void Start () {
@@ -23,13 +24,15 @@ public class Movement : MonoBehaviour {
 	void FixedUpdate () {
 	    if(Input.GetButton("Horizontal")) {
             rb.velocity = new Vector2(Input.GetAxis("Horizontal")*speed*Time.fixedDeltaTime, rb.velocity.y);
-
+            
             if(Input.GetAxis("Horizontal") >= 0) {
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
             } else {
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
             }
         }
+
+        m_Animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
         if(Input.GetButton("Jump") && grounded) {
             rb.AddForce(new Vector2(0, Input.GetAxis("Jump")*force*Time.fixedDeltaTime));
