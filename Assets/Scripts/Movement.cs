@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour {
     public float speed = 1;
     public float force = 10; 
     public Rigidbody2D rb;
+    public Player m_player;
 
     public bool grounded = false;
     public Animator m_Animator;
@@ -30,7 +31,11 @@ public class Movement : MonoBehaviour {
             } else {
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
             }
+
+            m_player.direction = Mathf.Sign(rb.velocity.x);
         }
+
+        
 
         m_Animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 

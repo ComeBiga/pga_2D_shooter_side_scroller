@@ -74,6 +74,7 @@ MonoBehaviour:
   rb: {fileID: 5097444}
   speed: 10
   player: {fileID: 0}
+  boom: {fileID: 189674, guid: 7d272dd8c55edcc4a92616b7d16c0bde, type: 2}
 --- !u!212 &21220256
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,6 +116,10 @@ Prefab:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: boom
+      value: 
+      objectReference: {fileID: 189674, guid: 7d272dd8c55edcc4a92616b7d16c0bde, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 119394}

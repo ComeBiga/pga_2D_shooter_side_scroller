@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public Text scoreText;
     public int score = 0;
     public Animator m_Animator;
+    public float direction = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour {
                                 transform.position,
                                 Quaternion.identity) as GameObject;
             go.GetComponent<Bullet>().player = this;
+            go.GetComponent<Bullet>().direction = direction;
         }
 
         scoreText.text = score.ToString();

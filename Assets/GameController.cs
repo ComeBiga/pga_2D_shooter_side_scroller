@@ -8,9 +8,16 @@ public class GameController : MonoBehaviour {
     public GameObject m_ExitGame;
     public GameObject m_MainMenu;
     public bool pause = false;
+    public static GameController instance;
 
     // Use this for initialization
     void Start () {
+        if(instance == null) {
+            instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+
         DontDestroyOnLoad(gameObject);
 	}
 	
