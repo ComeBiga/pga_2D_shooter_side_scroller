@@ -13,6 +13,9 @@ TagManager:
   - BombPickup
   - ExplosionFX
   - HealthBar
+  - LifeText
+  - LifeImage
+  - AmmoText
   layers:
   - Default
   - TransparentFX

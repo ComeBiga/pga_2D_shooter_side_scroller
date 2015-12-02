@@ -18,8 +18,10 @@ public class Destroyable : MonoBehaviour {
 
         if(bullet != null) { // STRZELA
             bullet.player.score++;
-            Destroy(gameObject);
-            
+            life--;
+            if(life <= 0) {
+                Destroy(gameObject);
+            }
         }
     }
 }
