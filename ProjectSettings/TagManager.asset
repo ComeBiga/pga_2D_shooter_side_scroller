@@ -16,6 +16,7 @@ TagManager:
   - LifeText
   - LifeImage
   - AmmoText
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

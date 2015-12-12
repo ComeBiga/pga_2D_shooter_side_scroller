@@ -18,6 +18,19 @@ public class Player : MonoBehaviour {
 
     private int CurrentAmmoAmount;
 
+
+    void OnLevelWasLoaded(int level) {
+        if(level > 0) {
+            GameObject spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
+
+            if(spawnPoint != null) {
+                Debug.Log("Jest!");
+
+                transform.position = spawnPoint.transform.position;
+            }
+        }
+    }
+
 	// Use this for initialization
 	void Start () {
         CurrentAmmoAmount = MaxAmmoAmount;
@@ -61,7 +74,7 @@ public class Player : MonoBehaviour {
 
         scoreText.text = score.ToString();
         LifeText.text = life.ToString();
-        AmmoText.text = CurrentAmmoAmount.ToString()+"/"+MaxAmmoAmount.ToString();
+        //AmmoText.text = CurrentAmmoAmount.ToString()+"/"+MaxAmmoAmount.ToString();
 
         for(int i=0; i<LifeImage.Length; i++) {
             string[] nameTrim = LifeImage[i].name.Split('_');
